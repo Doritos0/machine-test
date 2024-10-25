@@ -53,10 +53,10 @@
                     </div>
                 </form>
 
-                {% if pred is not None  %}
+                {% if regre is not None  %}
                     <div class="col-6">
                         <div class="row">
-                            <h3 class="text-center">Predicción Cupo L1:</h3> <p>{{ pred }}</p>
+                            <h3 class="text-center">Predicción Cupo L1:</h3> <p>{{ regre }}</p>
                         </div>
                     </div>
 
@@ -76,31 +76,37 @@
                 <form method="POST" class="form-control w-100 h-100">
                     {% csrf_token %}
                     <div class="form-group">
-                        <input name="subsegmento" id="subsegmento" style="width: 90%;height: 20%;margin: 5px;"
-                            class="form-control" type="number" placeholder="Ingrese Subsegmento" required>
+                        <input name="edad" id="edad" style="width: 90%;height: 20%;margin: 5px;"
+                            class="form-control" type="number" step="any" placeholder="Ingrese Edad" required>
 
-                        <input name="antiguedad" id="antiguedad" style="width: 90%;height: 20%;margin: 5px;"
-                            class="form-control" type="number" step="any" placeholder="Ingrese Antiguedad" required>
+                        <input name="internauta" id="internauta" style="width: 90%;height: 20%;margin: 5px;"
+                            class="form-control" type="number"  placeholder="Ingrese Internauta" required>
+
+                        <input name="cuenta_cte" id="cuenta_cte" style="width: 90%;height: 20%;margin: 5px;"
+                            class="form-control" type="number" placeholder="Ingrese Cuenta Corriente" required>
+
+                        <input name="debito" id="debito" style="width: 90%;height: 20%;margin: 5px;"
+                            class="form-control" type="number" placeholder="Ingrese Debito" required>
+
+                        <input name="cambio_pin" id="cambio_pin" style="width: 90%;height: 20%;margin: 5px;"
+                            class="form-control" type="number" placeholder="Ingrese Cambio PIN" required>
 
                         <input name="cuentas" id="cuentas" style="width: 90%;height: 20%;margin: 5px;"
                             class="form-control" type="number" step="any" placeholder="Ingrese Cuentas" required>
 
                         <input name="tc" id="tc" style="width: 90%;height: 20%;margin: 5px;"
                             class="form-control" type="number" step="any" placeholder="Ingrese TC" required>
-
-                        <input name="cupo_mx" id="cupo_mx" style="width: 90%;height: 20%;margin: 5px;"
-                            class="form-control" type="number" step="any" placeholder="Ingrese Cupo MX" required>
                         <center>
-                            <input  type="submit" name="regresion" class="btn btn-danger"
+                            <input  type="submit" name="clasificacion" class="btn btn-danger"
                             style="height: 15%; width: 25%; margin: 5px;"></input>
                         </center>
                     </div>
                 </form>
 
-                {% if pred is not None  %}
+                {% if clasi is not None  %}
                     <div class="col-6">
                         <div class="row">
-                            <h3 class="text-center">Predicción Cupo L1:</h3> <p>{{ pred }}</p>
+                            <h3 class="text-center">Predicción Target:</h3> <p>{{ clasi }}</p>
                         </div>
                     </div>
 
